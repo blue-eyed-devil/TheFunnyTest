@@ -184,7 +184,6 @@ if(isset($error) && $error != ""){
 			e.preventDefault();
 			$("#seq").val(this.id);
 			var url = $(location).attr("href").split("?")[0]+"?"+$("#numberseq").serialize();
-//alert(url);
 			$("#result-wrap").slideUp("slow").load(url + " #result").slideDown("slow");
 		});
 	});
