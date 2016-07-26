@@ -92,7 +92,7 @@ class generateSequence{
 				<form role="form" method="get" action="" id="numberseq">
                 	<input type="hidden" value="" name="seq" id="seq">
 					<div class="form-group form-group-lg col-xs-12 col-sm-4">
-						<input type="text" name="number" class="form-control" id="number">
+						<input type="number" name="number" class="form-control" id="number">
 					</div>
 				</form>
 			</div>
@@ -183,7 +183,7 @@ if(isset($error) && $error != ""){
 		$(".getseq").on("click", function(e){
 			e.preventDefault();
 			$("#seq").val(this.id);
-			var url = $(location).attr("href")+"?"+$("#numberseq").serialize();
+			var url = $(location).attr("href").split("?")[0]+"?"+$("#numberseq").serialize();
 //alert(url);
 			$("#result-wrap").slideUp("slow").load(url + " #result").slideDown("slow");
 		});
